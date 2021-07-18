@@ -8,7 +8,13 @@ class ComA extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>发送action获取用户信息</button>
+      <>
+        <button onClick={this.handleClick}>发送action获取用户信息</button>
+        <br />
+        用户信息:
+        <div>姓名：{this.props.username}</div>
+        <div>年龄：{this.props.age}</div>
+      </>
     );
   };
 }

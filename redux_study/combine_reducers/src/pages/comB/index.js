@@ -6,9 +6,28 @@ class ComB extends React.Component {
     this.props.getProList();
   }
 
+  renderList = () => {
+    if (!this.props.proList) {
+      return null;
+    }
+    return this.props.proList.map(item => {
+      return (
+        <div key={item.name}>
+          <div>名称：{item.name}</div>
+          <div>价格：{item.price}</div>
+        </div>
+      )
+    })
+  }
+
   render() {
     return (
-      <button onClick={this.handleClick}>发送action获取商品列表</button>
+      <>
+        <button onClick={this.handleClick}>发送action获取商品列表</button>
+        <br />
+        商品列表
+        {this.renderList()}
+      </>
     );
   };
 }
