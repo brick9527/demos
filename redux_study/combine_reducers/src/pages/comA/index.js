@@ -20,8 +20,8 @@ class ComA extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('ComA:', state);
-  return state;
+  console.log('ComA:', state.user);
+  return { ...state.user };
 }
 
 const mapDispatchToProps = (dispatch) => {

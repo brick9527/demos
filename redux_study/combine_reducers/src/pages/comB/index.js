@@ -34,7 +34,7 @@ class ComB extends React.Component {
 
 const mapStateToProps = (state) => {
   console.log('ComB:', state);
-  return state;
+  return { ...state.pro };
 }
 
 const mapDispatchToProps = (dispatch) => {
