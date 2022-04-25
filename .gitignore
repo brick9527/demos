@@ -1,2 +1,4 @@
 */**/node_modules
 node_modules
+fsm/demo1/dist
+typescript/class/*.js
